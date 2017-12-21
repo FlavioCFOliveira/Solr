@@ -1,5 +1,6 @@
 ﻿namespace Solr
 {
+    using Newtonsoft.Json;
     using Solr.Abstractions;
     using Solr.Model;
     using System;
@@ -14,10 +15,13 @@
         readonly string coreName;
         readonly HttpClient client;
 
+        string transactionID;
+
         public SolrCore(string baseAddress, string coreName)
         {
             this.baseUri = new Uri(baseAddress);
             this.coreName = coreName;
+            this.transactionID = string.Empty;
 
             this.client = new HttpClient()
             {
@@ -30,19 +34,49 @@
 
         public Uri SolrUri { get { return this.baseUri; } }
 
-        public Task<SolrResponse> Add(T obj)
+        public async Task<SolrResponse> Add(T obj)
         {
             throw new NotImplementedException();
         }
 
-        public Task<SolrResponse> Delete(T obj)
+
+        public async Task<SolrResponse> Delete(T obj)
         {
             throw new NotImplementedException();
         }
 
-        public Task<QueryResponse> Query(T obj)
+        public async Task<QueryResponse<T>> Query(string query = @"*:*")
+        {
+            if (string.IsNullOrEmpty(query)) throw new ArgumentNullException(nameof(query));
+
+            HttpRequestMessage request = new HttpRequestMessage(HttpMethod.Get, $"{baseUri.AbsoluteUri}/{this.coreName}/select?{query}");
+            request.Headers.Add("Accept", @"application/json");
+
+            var result = await this.client.SendAsync(request);
+            if (result.IsSuccessStatusCode)
+            {
+                var cnt = await result.Content.ReadAsStringAsync();
+
+                var output = JsonConvert.DeserializeObject<QueryResponse<T>>(cnt);
+
+                return output;
+            }
+
+            return null;
+        }
+
+        public async Task Commit()
         {
             throw new NotImplementedException();
+
+
+            this.transactionID = string.Empty;
+        }
+        public async Task Rollback()
+        {
+            throw new NotImplementedException();
+
+            this.transactionID = string.Empty;
         }
 
     }

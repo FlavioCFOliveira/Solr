@@ -3,11 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27130.2010
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Solr", "src\Solr\Solr.csproj", "{05881154-DFB0-4BEE-A152-61EBE09EC580}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Solr", "src\Solr\Solr.csproj", "{05881154-DFB0-4BEE-A152-61EBE09EC580}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{28DAD479-8697-4970-BB48-CE344D126FE9}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{2822A3CA-9AFD-4344-A431-BB74FA7F81D9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SolrTests", "tests\SolrTests\SolrTests.csproj", "{D8CDA07C-74A6-4A0B-BCC4-389DB39541FF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -19,12 +21,17 @@ Global
 		{05881154-DFB0-4BEE-A152-61EBE09EC580}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{05881154-DFB0-4BEE-A152-61EBE09EC580}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{05881154-DFB0-4BEE-A152-61EBE09EC580}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D8CDA07C-74A6-4A0B-BCC4-389DB39541FF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D8CDA07C-74A6-4A0B-BCC4-389DB39541FF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D8CDA07C-74A6-4A0B-BCC4-389DB39541FF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D8CDA07C-74A6-4A0B-BCC4-389DB39541FF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{05881154-DFB0-4BEE-A152-61EBE09EC580} = {28DAD479-8697-4970-BB48-CE344D126FE9}
+		{D8CDA07C-74A6-4A0B-BCC4-389DB39541FF} = {2822A3CA-9AFD-4344-A431-BB74FA7F81D9}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {AD44D1F2-D919-4A53-A2B2-8C5C1690BF5B}

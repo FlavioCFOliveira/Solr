@@ -1,10 +1,17 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace Solr.Model
+﻿namespace Solr.Model
 {
-    public class QueryResponse
+    using Newtonsoft.Json;
+    using System;
+    using System.Collections.Generic;
+    using System.Text;
+
+    public class QueryResponse<T>
     {
+
+        [JsonProperty("responseHeader")]
+        public QueryResponseHeader Header { get; set; }
+
+
     }
+
 }

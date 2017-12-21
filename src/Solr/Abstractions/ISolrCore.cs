@@ -17,7 +17,11 @@
 
         Task<SolrResponse> Delete(T obj);
 
-        Task<QueryResponse> Query(T obj);
-        
+        Task<QueryResponse<T>> Query(string query);
+
+        Task Commit();
+
+        Task Rollback();
+
     }
 }
