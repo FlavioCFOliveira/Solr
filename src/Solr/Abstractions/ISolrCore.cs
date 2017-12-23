@@ -17,7 +17,7 @@
 
         Task<SolrResponse> Delete(T obj);
 
-        Task<QueryResponse<T>> Query(string query, int start = 0, int rows = 10);
+        Task<QueryResponse<T>> Query(string query, int start = 0, int rows = 10, string[] sort = null);
 
         Task Commit();
 
