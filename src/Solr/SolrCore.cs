@@ -45,11 +45,14 @@
             throw new NotImplementedException();
         }
 
-        public async Task<QueryResponse<T>> Query(string query = @"*:*", int start = 0, int rows = 10)
+        public async Task<QueryResponse<T>> Query(string query = @"*:*", int start = 0, int rows = 10, string[] sort = null)
         {
             if (string.IsNullOrEmpty(query)) throw new ArgumentNullException(nameof(query));
 
-            string url = $"{baseUri.AbsoluteUri}/{this.coreName}/select?q={query}&rows={rows.ToString()}&start={start.ToString()}";
+            string sortOrder = string.Empty;
+            if (sort != null && sort.Length > 0) sortOrder = "&sort=" + string.Join(',', sort);
+
+            string url = $"{baseUri.AbsoluteUri}/{this.coreName}/select?indent=off&q={query}&rows={rows.ToString()}&start={start.ToString()}{sortOrder}&wt=json";
 
             HttpRequestMessage request = new HttpRequestMessage(HttpMethod.Get, url);
             request.Headers.Add("Accept", @"application/json");
