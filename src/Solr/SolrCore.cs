@@ -45,11 +45,13 @@
             throw new NotImplementedException();
         }
 
-        public async Task<QueryResponse<T>> Query(string query = @"*:*")
+        public async Task<QueryResponse<T>> Query(string query = @"*:*", int start = 0, int rows = 10)
         {
             if (string.IsNullOrEmpty(query)) throw new ArgumentNullException(nameof(query));
 
-            HttpRequestMessage request = new HttpRequestMessage(HttpMethod.Get, $"{baseUri.AbsoluteUri}/{this.coreName}/select?{query}");
+            string url = $"{baseUri.AbsoluteUri}/{this.coreName}/select?q={query}&rows={rows.ToString()}&start={start.ToString()}";
+
+            HttpRequestMessage request = new HttpRequestMessage(HttpMethod.Get, url);
             request.Headers.Add("Accept", @"application/json");
 
             var result = await this.client.SendAsync(request);

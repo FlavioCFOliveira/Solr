@@ -14,7 +14,7 @@ namespace Solr.Model
         [JsonProperty("QTime")]
         public int QTime { get; set; }
 
-        [JsonProperty("parameters")]
+        [JsonProperty("params")]
         public Dictionary<string, string> parameters { get; set; }
 
     }

@@ -11,6 +11,8 @@
         [JsonProperty("responseHeader")]
         public QueryResponseHeader Header { get; set; }
 
+        [JsonProperty("response")]
+        public QueryResponseContent<T> Response { get; set; }
 
     }
 
