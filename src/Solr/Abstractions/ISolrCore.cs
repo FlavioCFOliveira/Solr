@@ -23,5 +23,7 @@
 
         Task Rollback();
 
+        void InitializeIndexFields();
+
     }
 }

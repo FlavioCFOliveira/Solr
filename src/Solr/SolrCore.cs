@@ -9,11 +9,12 @@
     using System.Text;
     using System.Threading.Tasks;
 
-    public class SolrCore<T> : ISolrCore<T>
+    public abstract class SolrCore<T> : ISolrCore<T>
     {
-        readonly Uri baseUri;
-        readonly string coreName;
-        readonly HttpClient client;
+
+        protected readonly Uri baseUri;
+        protected readonly string coreName;
+        protected readonly HttpClient client;
 
         string transactionID;
 
@@ -38,8 +39,7 @@
         {
             throw new NotImplementedException();
         }
-
-
+        
         public async Task<SolrResponse> Delete(T obj)
         {
             throw new NotImplementedException();
@@ -83,6 +83,8 @@
 
             this.transactionID = string.Empty;
         }
+
+        public abstract void InitializeIndexFields();
 
     }
 
