@@ -13,7 +13,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\src\Solr\Solr.csproj" />
+    <ProjectReference Include="..\..\src\Solr\SolrHttpClient.csproj" />
   </ItemGroup>
 
 </Project>

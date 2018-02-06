@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.27130.2010
+VisualStudioVersion = 15.0.27130.2026
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Solr", "src\Solr\Solr.csproj", "{05881154-DFB0-4BEE-A152-61EBE09EC580}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SolrHttpClient", "src\Solr\SolrHttpClient.csproj", "{05881154-DFB0-4BEE-A152-61EBE09EC580}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{28DAD479-8697-4970-BB48-CE344D126FE9}"
 EndProject

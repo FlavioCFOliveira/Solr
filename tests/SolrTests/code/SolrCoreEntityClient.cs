@@ -15,7 +15,7 @@
 
         public override void InitializeIndexFields()
         {
-            base.
+
         }
     }
 }
