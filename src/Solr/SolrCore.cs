@@ -20,6 +20,9 @@
 
         public SolrCore(string baseAddress, string coreName)
         {
+            if (string.IsNullOrEmpty(baseAddress)) throw new ArgumentNullException(nameof(baseAddress));
+            if (string.IsNullOrEmpty(coreName)) throw new ArgumentNullException(nameof(coreName));
+
             this.baseUri = new Uri(baseAddress);
             this.coreName = coreName;
             this.transactionID = string.Empty;
@@ -73,15 +76,11 @@
         public async Task Commit()
         {
             throw new NotImplementedException();
-
-
-            this.transactionID = string.Empty;
         }
+
         public async Task Rollback()
         {
             throw new NotImplementedException();
-
-            this.transactionID = string.Empty;
         }
 
         public abstract void InitializeIndexFields();
