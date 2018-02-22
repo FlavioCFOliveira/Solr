@@ -6,24 +6,30 @@
     using System.Text;
     using System.Threading.Tasks;
 
-    public interface ISolrCore<T>
+    public interface ISolrCore
     {
 
         string CoreName { get; }
 
-        Uri SolrUri { get; }
+        string BaseAddress { get; }
 
-        Task<SolrResponse> Add(T obj);
+        //Task<SolrResponse> Add(T obj);
+        //Task<SolrResponse> AddRange(IEnumerable<T> lst);
 
-        Task<SolrResponse> Delete(T obj);
+        ///// <summary>
+        ///// Removes All the documents from the index
+        ///// </summary>
+        ///// <returns></returns>
+        //Task<SolrResponse> Clean();
 
-        Task<QueryResponse<T>> Query(string query, int start = 0, int rows = 10, string[] sort = null);
+        //Task<SolrResponse> Delete(T obj);
+        //Task<SolrResponse> DeleteByQuery(string query);
 
-        Task Commit();
+        //Task<QueryResponse<T>> Query(string query, int start = 0, int rows = 10, string[] sort = null);
 
-        Task Rollback();
+        //Task<SolrResponse> Commit();
 
-        void InitializeIndexFields();
+        //Task<SolrResponse> Optimize();
 
     }
 }
