@@ -3,18 +3,19 @@
   <PropertyGroup>
     <TargetFramework>netcoreapp2.0</TargetFramework>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <Version>0.0.1</Version>
+    <Version>0.0.2</Version>
     <Authors>Flávio CF Oliveira</Authors>
     <Company>Flávio CF Oliveira</Company>
-    <Product>Solr Client</Product>
+    <Product>Solr HttpClient</Product>
     <Copyright>Flávio CF Oliveira</Copyright>
-    <PackageProjectUrl>https://github.com/FlavioCFOliveira/Solr</PackageProjectUrl>
+    <PackageProjectUrl></PackageProjectUrl>
     <RepositoryUrl>https://github.com/FlavioCFOliveira/Solr</RepositoryUrl>
     <RepositoryType>Git</RepositoryType>
+    <PackageTags>Apache Solr, Http, Client</PackageTags>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Newtonsoft.Json" Version="10.0.3" />
+    <PackageReference Include="Newtonsoft.Json" Version="11.0.1" />
   </ItemGroup>
 
 </Project>
