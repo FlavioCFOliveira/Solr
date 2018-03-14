@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+
+    <!-- Required elements-->
+    <id>SolrHttpClient</id>
+    <version>0.0.2</version>
+    <description></description>
+    <authors>Flávio CF Oliveira</authors>
+
+    <!-- Optional elements -->
+    <title>Solr Httpclient for dotnet core</title>
+    <owners>FlavioCFO</owners>
+    <projectUrl>https://github.com/FlavioCFOliveira/SolrHttpClient</projectUrl>
+    <tags>"Apache Solr" Solr Client HttpClient</tags>
+
+  </metadata>
+  <!-- Optional 'files' node -->
+
+</package>

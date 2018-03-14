@@ -3,3 +3,4 @@ src/Solr/bin/
 src/Solr/obj/
 tests/SolrTests/bin/
 tests/SolrTests/obj/
+*.user
