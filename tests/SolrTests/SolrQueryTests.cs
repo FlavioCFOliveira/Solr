@@ -15,14 +15,14 @@ namespace SolrTests
 
             // sudo su - solr -c "/opt/solr/bin/solr create -c TestIX -n data_driven_schema_configs"
             this.core = new SolrCoreEntityClient(@"http://192.168.1.96:8983/solr", "TestIX");
-            this.core.InitializeIndexFields();
+            
 
         }
 
         [TestMethod]
         public void SolrQueryTests_all_Success()
         {
-            var result = this.core.Query("*:*").Result;
+            //var result = this.core.Query("*:*").Result;
         }
         
     }

@@ -6,7 +6,7 @@
     using System.Collections.Generic;
     using System.Text;
 
-    public interface ISolrCoreEntity : ISolrCore<SolrCoreEntity>
+    public interface ISolrCoreEntity : ISolrCore
     {
     }
 }

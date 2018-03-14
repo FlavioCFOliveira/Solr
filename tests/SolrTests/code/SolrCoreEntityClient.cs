@@ -13,9 +13,6 @@
         {
         }
 
-        public override void InitializeIndexFields()
-        {
 
-        }
     }
 }
